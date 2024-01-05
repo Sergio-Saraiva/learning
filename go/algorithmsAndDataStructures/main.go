@@ -15,5 +15,46 @@ func main() {
 	fmt.Println("Bubble sort: ")
 	fmt.Println(bubble_sort([]int {2,5,4,6,8,9,10,3}))
 
-	fmt.Println("teste")
+	type Car struct {
+		color string;
+		fabrication int32;
+	}
+
+	fmt.Println("Queue:")
+	q := NewQueue[Car]();
+
+	fmt.Println(q.length);
+	fmt.Println(q.Peek());
+	fmt.Println(q.Peek());
+
+	q.enqueue(Car{color: "red", fabrication: 2020});
+	q.enqueue(Car{color: "green", fabrication: 2019});
+	q.enqueue(Car{color: "yellow", fabrication: 2023});
+	
+	fmt.Println(q.length);
+	fmt.Println(q.Peek());
+	fmt.Println(q.Peek());
+	
+	fmt.Println(q.deque());
+	fmt.Println(q.deque());
+	fmt.Println(q.deque());
+	fmt.Println(q.deque());
+	fmt.Println(q.length);
+	fmt.Println(q.Peek());
+
+	fmt.Println("Stack:")
+
+	s := NewStack[Car]();
+
+	s.Push(Car{color: "red", fabrication: 2020});
+	s.Push(Car{color: "green", fabrication: 2019});
+	s.Push(Car{color: "yellow", fabrication: 2023});
+
+	fmt.Println(s.Peek());
+	fmt.Println(s.Pop())
+	fmt.Println(s.Peek());
+	fmt.Println(s.Pop())
+	fmt.Println(s.Pop())
+	fmt.Println(s.Pop())
+	fmt.Println(s.Peek())
 }
